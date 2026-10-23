@@ -1,0 +1,14 @@
+numpy>=2.0
+scipy>=1.11          # linprog(method="highs") for the LP bound (Eq. 6)
+scikit-learn>=1.3    # usability head
+hnswlib>=0.8         # HNSW index over reply states
+sentence-transformers>=3.0   # paraphrase-multilingual-MiniLM-L12-v2 state encoder
+torch
+tiktoken>=0.7        # token cost c(f), default cl100k_base
+transformers         # HuggingFace tokenizer when SIBAR_TOKENIZER is a model id
+python-dotenv>=1.0
+pyyaml>=6.0
+tqdm
+pytest
+# LLM backend (OpenRouter, OpenAI-compatible API; only needed when a backend is "openrouter")
+openai>=1.0

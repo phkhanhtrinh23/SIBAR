@@ -1,0 +1,30 @@
+# Defaults of the paper (Sec. 5.1, Appendix B)
+budget: 128            # B, tokens per reply
+pool_cap: 32           # M
+focus_replies: 3       # m
+relation_top_k: 3
+relation_max_tokens: 32
+lease_cap_turns: 1000
+horizon: 6             # H (tuned on dev)
+gamma: 1.0             # per-turn discount (tuned on dev)
+credit: horizon
+selector: exact        # exact | greedy
+neighbors: 16          # S
+tau_w: 0.1
+eta: 10.0
+use_backoff: true
+scenario_source: cross_user
+oracle_mix: 0.0
+roles_at_reply: false  # true: scenario roles relative to the reply-time context (variant)
+hnsw_m: 16
+hnsw_ef: 64
+encoder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+use_digest: true
+complete_evidence_gate: true
+lease_aware: true
+costs:
+  c_call: 1.0          # one call (~420 ms)
+  c_err: 2.0
+  lam: 0.0012          # per token
+  c_pred: 0.038        # per non-empty packet
+  charge_pred_every_reply: false

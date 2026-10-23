@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+data/raw/
+data/processed/
+outputs/
+.cache/
+*.egg-info/
+outputs_before_fix/
+outputs_domain_rule/
+outputs_qwen72b_cl100k/
+outputs_vllm/
+outputs_oldsplit/
+outputs_chain/
+outputs_v2_split/
